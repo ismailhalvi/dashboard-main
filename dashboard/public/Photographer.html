@@ -63,36 +63,75 @@
                 <h3>اسماعيل حلوي</h3>
             </div>
 
-            <ul class="sidebar-list mt-2">
-                <li class="mb-1 active">
-                    <i class="fa-solid fa-house"></i>
-                    <a class="m-r-10" href="">الصفحة الرئيسية</a>
-                </li>
-                <a class="mr-10" href="index.html">الرئيسية</a>
+           <ul class="sidebar-list mt-2">
 
-<a class="mr-10" href="blog.html">الأفلام</a>
+    <li class="mb-1">
+        <i class="fa-solid fa-house"></i>
+        <a class="m-r-10" href="index.html">الصفحة الرئيسية</a>
+    </li>
 
-<a class="mr-10" href="blog.html">المسلسلات</a>
+    <li class="mb-1">
+        <i class="fa-solid fa-film"></i>
+        <a class="m-r-10" href="blog.html">الأفلام</a>
+    </li>
 
-<a class="mr-10" href="blog.html">الحلقات</a>
+    <li class="mb-1">
+        <i class="fa-solid fa-clapperboard"></i>
+        <a class="m-r-10" href="blog.html">المسلسلات</a>
+    </li>
 
-<a class="mr-10" href="blog.html">التصنيفات</a>
+    <li class="mb-1">
+        <i class="fa-solid fa-tv"></i>
+        <a class="m-r-10" href="blog.html">الحلقات</a>
+    </li>
 
-<a class="mr-10" href="Photographer.html">المصورين</a>
+    <li class="mb-1">
+        <i class="fa-solid fa-tags"></i>
+        <a class="m-r-10" href="blog.html">التصنيفات</a>
+    </li>
 
-<a class="mr-10" href="blog.html">المدونة</a>
+    <li class="mb-1">
+        <i class="fa-solid fa-user-tie"></i>
+        <a class="m-r-10" href="Photographer.html">المصورين</a>
+    </li>
 
-<a class="mr-10" href="blog.html">التعليقات</a>
+    <li class="mb-1">
+        <i class="fa-solid fa-newspaper"></i>
+        <a class="m-r-10" href="blog.html">المدونة</a>
+    </li>
 
-<a class="mr-10" href="blog.html">التقييمات</a>
+    <li class="mb-1">
+        <i class="fa-solid fa-comments"></i>
+        <a class="m-r-10" href="blog.html">التعليقات</a>
+    </li>
 
-<a class="mr-10" href="index.html">الإعدادات</a>
+    <li class="mb-1">
+        <i class="fa-solid fa-star-half-stroke"></i>
+        <a class="m-r-10" href="blog.html">التقييمات</a>
+    </li>
 
-<a class="mr-10" href="index.html">تسجيل الخروج</a>
+    <li class="mb-1">
+        <i class="fa-solid fa-gear"></i>
+        <a class="m-r-10" href="index.html">الاعدادات</a>
+    </li>
 
-<a class="mr-10" href="add.post.html">إضافة منشور</a>
-            </ul>
+    <li class="mb-1">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <a class="m-r-10" href="index.html">تسجيل الخروج</a>
+    </li>
 
+</ul>
+<script>
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+    document.querySelectorAll('.sidebar-list li').forEach(li => {
+        const link = li.querySelector('a');
+
+        if (link && link.getAttribute('href') === currentPage) {
+            li.classList.add('active');
+        }
+    });
+</script>
         </div>
 
 
