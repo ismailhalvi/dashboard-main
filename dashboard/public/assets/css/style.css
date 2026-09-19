@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+
+}
+ul {
+    list-style-type: none;
+
+    padding: 0;
+}
+.header {
+    background-color: white;
+    box-shadow: 3px 3px 3px #cccccc5a;
+}
+
+.logo {
+    width: 250px;
+    text-align: center;
+    border-left: 1px solid #ccc;
+}
+.logo a {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    
+
+}
+.search i {
+    position: absolute;
+    right: 160px;
+    top: 50%;
+    transform: translatey(-50%);
+    color: #333;
+} 
+.sidebar {
+    width: 250px;
+    background-color: #121111;
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+    transition: 0.3s;
+    overflow-y: scroll;
+    /* top: 55px; */
+}
+.content {
+    height: calc(100vh - 40px);
+    background-color: #f0fafb;
+    margin-right: 250px;
+    margin-top: 40px;
+    transition: 0.3s;
+    /* margin-top : 55px; */
+}
+@media (max-width: 768px) {
+    .sidebar {
+        width: 250px;
+        right: -250px;
+        transition: 0.3s;
+        z-index: 999;
+        
+    }
+    .content {
+        margin-right: 0;
+    }
+}
+.icons i {
+    color: rgba(0, 0, 0, 0.584);
+    font-size: 20px;
+    cursor: pointer;
+
+}
+.active-users {
+    color: rgba(0, 0, 0, 0.584);
+    font-size: 20px;
+    cursor: pointer;
+}
+.avatar img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    align-items: center;
+
+}
+.profile img {
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    padding: 2px;
+}
+.profile h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.sidebar-list {
+    margin-right:10px;
+    padding-left: 10px;
+
+}
+
+.sidebar-list li  {
+    cursor: pointer;
+
+    padding: 5px;
+    border-radius: 5px;
+}
+.active {
+    background-color: #4b0082;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.sidebar-list li:hover {
+   cursor: pointer;
+       background-color: #4c0082c0;
+
+    padding: 5px;
+    border-radius: 5px;}
+
+.sidebar-list li a,
+.sidebar-list li i {
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.ul-sidebar li i {
+    color: white;
+}
+
+/* تخصيص عرض شريط التمرير */
+#sidebar::-webkit-scrollbar {
+    width: 8px; /* عرض شريط التمرير */
+}
+
+/* تخصيص المسار (الخلفية) */
+#sidebar::-webkit-scrollbar-track {
+    background: #747373; /* لون الخلفية */
+    border-radius: 10px; /* انحناء الحواف */
+}
+
+/* تخصيص الجزء القابل للتحريك */
+#sidebar::-webkit-scrollbar-thumb {
+    background: #1f34f2;
+    border-radius: 10px;
+}
+
+/* تخصيص الجزء عند التمرير عليه */
+#sidebar::-webkit-scrollbar-thumb:hover {
+    background: #09d013;
+}
+.bell::after {
+    position: absolute;
+    background-color: red;
+    width: 12px;
+    content: "5";
+    height: 12px;
+    border-radius: 50%;
+    color: white;
+    top: -5px;
+    right: -5px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;   
+
+}
+.stat {
+background-image: linear-gradient(to top, #88d3ce 0%, #6e45e2 100%);    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.stat-1
+{
+background-image: linear-gradient(135deg, #3B82F6, #06B6D4);
+
+}
+
+.stat-2{
+  background-image:linear-gradient(135deg, #8B5CF6, #EC4899);;
+}
+.stat-3{
+   background-image: linear-gradient(135deg, #F97316, #FACC15);
+}
+.stat-4{
+
+
+    background-image: linear-gradient(135deg, #22C55E, #A3E635);
+}
+
+.stat h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.stat h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.stat p {
+    font-size: 16px;
+
+}
+#chart1 , #chart {
+    overflow: hidden;
+    height: 400px;
+   
+}
+.card p {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+}
+.item-side-menu {
+display: flex; 
+justify-content: space-between;
+align-items: center;
+background-color: #eee;
+border-radius: 10px;
+padding: 10px;
+margin-bottom: 10px;
+ border-bottom: 1px solid blue;
+}
+.img-info {
+ display: flex;
+ align-items: center;
+gap: 15px;
+
+}
+.img-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    padding: 2px;
+}
+.img-info h5 {
+    font-size: 15px;
+   
+    font-weight: 600;
+}
+.social-media {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.social-media i {
+    
+
+    cursor: pointer;
+}
+
+.face-icon {
+    color: #1877f2;
+    font-size: 20px;
+}
+.grw-user {
+    position: absolute;
+    top: 0;
+  
+}
+
+.massages-area {
+    background-color: white;
+    width: 300px;
+    top: 40px;
+    left: -30px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    border-bottom: 1px solid blue;
+   
+}
+.massages-area li {
+padding: 10px;
+border-bottom: 1px solid #ccc;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+.massages-area li:hover {
+    background-color: #f0f0f0;
+}
+.m-header {
+    height: 35px;
+    width: 100%;
+  background-color: #6e45e2;
+  border-radius: 5px;
+  position: relative;
+}
+.m-header::after {
+    position: absolute;
+      content: "";
+    /* width: 15px;
+    height: 15px;
+  
+    background-color: #6e45e2; */
+    top: -40px;
+    left: 15px;
+    border: 15px solid ;
+    border-color : transparent transparent #6e45e2 transparent;
+}
+
+.m-header h3 {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    padding: 5px;  
+}
+.item-left {
+    
+align-items: center;
+  
+}
+
+
+.item-left img {
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+.item-left h4 {
+    font-size: 16px;
+
+    color: black;
+
+}
+
+
+.li-massages {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.li-massages:hover {
+    background-color: #f0f0f0;
+}
+.li-massages img {
+    width: 50px;
+}
+.a-ul {
+    color: #6e45e2;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+}
+.i-plus {
+    position: relative;
+    top: 2px;
+}
+.face-icon {
+    color: #1877f2;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 13px;
+}
+.insta-icon {
+    color: #c13584;
+    font-size: 20px;
+    margin-bottom: 13px;
+}

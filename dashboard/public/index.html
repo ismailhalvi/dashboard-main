@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script>
+        window.onload = function () {
+            setTimeout(function () {
+                document.getElementById("loader").style.display = "none";
+            }, 100); // 2000 ميلي ثانية = 2 ثانية
+        };
+    </script>
+    <title>لوحة التحكم</title>
+    <div id="loader" style="position: fixed; top: 0; left: 0; 
+    width: 100%; height: 100%; background-color: #fff; 
+    display: flex; justify-content: center; align-items: center; z-index: 9999;">
+        <img src="assets/imgs/Spinner@1x-1.0s-200px-200px.svg" width="70" alt="Loading...">
+    </div>
+</head>
+
+<body>
+
+
+    <div class="main-wrapper">
+        <nav class="fixed-top">
+            <header class="header d-flex justify-content-between align-items-center py-1">
+
+                <div class="right-header d-flex align-items-center gap-3">
+                    <div class="logo d-none d-md-block">
+                        <a href="/">لوحة تحكم المتجر</a>
+                    </div>
+                    <div class="px-3">
+                        <i class="fa-solid fa-bars" id="sidebar-toggle"></i>
+
+                    </div>
+                    <form action=""class="search-form d-flex align-items-center position-relative search d-none d-md-block"> 
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                         <input class="form-control" type="text" placeholder="بحث هنا..."> 
+                         <i class="fa-solid fa-magnifying-glass"></i>
+                        
+                        </form>
+                </div>
+
+
+
+
+                <div class="left-header d-flex align-items-center gap-3 px-3">
+                    <div class="icons d-flex align-items-center gap-3">
+                        <a href=""> <i class="fa-solid fa-comment"></i></a>
+
+
+
+
+
+
+                        <div class="massages-container position-relative" id="massages-container">
+                            <i class="fa-solid fa-envelope"></i>
+                            <ul class="massages-area position-absolute text-center mt-2" id="massages-area">
+                                <div class="m-header">
+                                    <h3>احدث الرسائل</h3>
+                                </div>
+                                <li class="li-massages">
+
+                                    <div class="d-flex item-left gap-2">
+                                        
+                                        <img src="assets/imgs/افتار2.jpg" alt="">
+                                        <h4>محمد علي</h4>
+                                
+                                    </div>
+                                    <i class="fa-solid fa-comment"></i>
+
+                                </li>
+                                <li class="li-massages">
+
+                                    <div class="d-flex item-left gap-2">
+                                        <img src="assets/imgs/افتار3.jpg" alt="">
+                                        <h4> احمد الموسى</h4>
+
+                                    </div>
+                                    <i class="fa-solid fa-comment"></i>
+
+                                </li>
+                                <li class="li-massages">
+
+                                    <div class="d-flex item-left gap-2">
+                                        <img src="assets/imgs/افتار3.jpg" alt="">
+                                        <h4>خالد الاحمد</h4>
+
+                                    </div>
+                                    <i class="fa-solid fa-comment"></i>
+
+                                </li>
+                                <li class="li-massages">
+
+                                    <div class="d-flex item-left gap-2">
+                                        <img src="assets/imgs/افتار 6.jpg" alt="">
+                                        <h4>مصطفى العبدو</h4>
+
+                                    </div>
+                                    <i class="fa-solid fa-comment"></i>
+
+                                </li>
+                            
+                            
+                    
+                                <a class="a-ul" href="">كل الرسائل</a>
+                            </ul>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+                        <a class="position-relative bell" href=""><i class="fa-solid fa-bell"></i></a>
+                        <a href=""><i class="fa-solid fa-user"></i></a>
+                    </div>
+                    <div class="avatar">
+                        <img src="assets/imgs/d2090ffb-1769-4853-916c-79c2a4ae2568.jpg" alt="">
+
+                    </div>
+
+                    <a data-bs-toggle="offcanvas" href="#users-oline"><i class="fa-solid fa-bars active-users"></i></a>
+                </div>
+
+            </header>
+        </nav>
+
+
+        <div class="sidebar" id="sidebar">
+            <div class="profile">
+                <img width="90" src="assets/imgs/d2090ffb-1769-4853-916c-79c2a4ae2568.jpg" alt="">
+
+                <h3>اسماعيل حلوي</h3>
+            </div>
+
+            <ul class="sidebar-list mt-2">
+                <li class="mb-1 active">
+                    <i class="fa-solid fa-house"></i>
+                    <a class="m-r-10" href="">الصفحة الرئيسية</a>
+                </li>
+                <a class="mr-10" href="index.html">الرئيسية</a>
+
+<a class="mr-10" href="blog.html">الأفلام</a>
+
+<a class="mr-10" href="blog.html">المسلسلات</a>
+
+<a class="mr-10" href="blog.html">الحلقات</a>
+
+<a class="mr-10" href="blog.html">التصنيفات</a>
+
+<a class="mr-10" href="Photographer.html">المصورين</a>
+
+<a class="mr-10" href="blog.html">المدونة</a>
+
+<a class="mr-10" href="blog.html">التعليقات</a>
+
+<a class="mr-10" href="blog.html">التقييمات</a>
+
+<a class="mr-10" href="index.html">الإعدادات</a>
+
+<a class="mr-10" href="index.html">تسجيل الخروج</a>
+
+<a class="mr-10" href="add.post.html">إضافة منشور</a>
+            </ul>
+
+        </div>
+
+
+
+
+        <div class="content p-3" id="content">
+            <div class="inner-content">
+                <div class="container-fluid p-3">
+                    <div class="row gap-3 flex-wrap flex-md-nowrap">
+                        <div class="col-md-3 stat stat-1 flex-shrink-1">
+                            <div>
+                                <h3>عدد المشاهدات اليومية</h3>
+                                <h4>5500 مشاهد</h4>
+                                <p class="text-white">العدد يتجدد كل يوم</p>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-eye fs-2"></i>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 stat stat-2 flex-shrink-1">
+                            <div>
+                                <h3>عدد المسلسلات المتوفرة</h3>
+                                <h4>2000 مسلسل</h4>
+                                <p class="text-white">العدد يتجدد كل يوم</p>
+                            </div>
+                            <div>
+
+                                <i class="fa-solid fa-clapperboard  fs-2"></i>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 stat stat-3 flex-shrink-1">
+                            <div>
+                                <h3>عدد الحلقات يوميا </h3>
+                                <h4>10 حلقات</h4>
+                                <p class="text-white">العدد يتجدد كل يوم</p>
+                            </div>
+                            <div>
+
+                                <i class="fa-solid fa-tv  fs-2"></i>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3 stat stat-4 flex-shrink-1">
+                            <div>
+                                <h3>عدد الارباح الشهرية</h3>
+                                <h4>4000$ </h4>
+                                <p class="text-white">العدد يتجدد كل يوم</p>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-dollar-sign  fs-2"></i>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="row mt-5 gap-2 flex-wrap flex-md-nowrap">
+                        <div class="col-md-6 p-r-0  p-l-0">
+                            <div class="card">
+                                <p class="text-center mt-2">جدول توضيحي لعدد الحلقات </p>
+                                <div id="chart">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 p-l-0 p-r-0">
+                            <div class="card">
+                                <p class="text-center mt-2">جدول توضيحي لعدد الافلام</p>
+                                <div id="chart1">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- users online list  -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="users-oline" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="alert alert-success">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span>هذه القائمة تعرض المستخدمين المتصلين حاليا. </span>
+
+        </div>
+        <div class="offcanvas-body">
+
+            <div class="item-side-menu ">
+                <div class="img-info d-flex position-relative">
+                    <div class="spinner-grow text-success grw-user" style="width: 10px; height: 10px;" role="status">
+                        <span class="visually-hidden">نشط</span>
+                    </div>
+                    <img width="50" src="assets/imgs/افتار2.jpg" alt="">
+                    <h5>محمد علي</h5>
+                </div>
+                <div class="social-media">
+                    <i class="fa-brands fa-facebook face-icon"></i>
+                   <i class="fa-brands fa-instagram insta-icon"></i>
+                </div>
+            </div>
+            <div class="item-side-menu ">
+                <div class="img-info d-flex position-relative">
+                    <div class="spinner-grow text-success grw-user" style="width: 10px; height: 10px;" role="status">
+                        <span class="visually-hidden">نشط</span>
+                    </div>
+                    <img width="50" src="assets/imgs/افتار3.jpg" alt="">
+                    <h5>احمد الموسى</h5>
+                </div>
+                <div class="social-media">
+                    <i class="fa-brands fa-facebook face-icon"></i>
+                  
+                    <i class="fa-brands fa-instagram insta-icon"></i>
+
+
+                </div>
+            </div>
+            <div class="item-side-menu ">
+                <div class="img-info d-flex position-relative">
+                    <div class="spinner-grow text-success grw-user" style="width: 10px; height: 10px;" role="status">
+                        <span class="visually-hidden">نشط</span>
+                    </div>
+                    <img width="50" src="assets/imgs/افتار 4.jpg" alt="">
+                    <h5>خالد الاحمد</h5>
+                </div>
+                <div class="social-media">
+                    <i class="fa-brands fa-facebook face-icon"></i>
+                 <i class="fa-brands fa-instagram insta-icon"></i>
+                </div>
+            </div>
+               <div class="item-side-menu ">
+                <div class="img-info d-flex position-relative">
+                    <div class="spinner-grow text-success grw-user" style="width: 10px; height: 10px;" role="status">
+                        <span class="visually-hidden">نشط</span>
+                    </div>
+                    <img width="50" src="assets/imgs/افتار 6.jpg" alt="">
+                    <h5>مصطفى العبدو</h5>
+                </div>
+                <div class="social-media">
+                    <i class="fa-brands fa-facebook face-icon"></i>
+                 <i class="fa-brands fa-instagram insta-icon"></i>
+                </div>
+            </div>
+     
+
+
+
+
+
+        </div>
+    </div>
+    </div>
+
+
+    <!-- تحميل مكتبة jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <!-- تحميل مكتبة ApexCharts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!-- تحميل Bootstrap (مع Popper.js) من CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- تحميل السكربتات الخاصة بك -->
+    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/script.js"></script>
+
+
+</body>
+
+</html>
